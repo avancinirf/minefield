@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<!-- Custom Game CSS -->
+	<link rel="stylesheet" href="./src/css/styles.css">
+
+	<script src="https://use.fontawesome.com/2bef2bcd7f.js"></script>
+
+    <title>MINEFIELD GAME!</title>
+  </head>
+  <body>
+    <div class="container view-area">
+		<h1 class="game-title">MINEFIELD GAME!</h1>
+		<div class="container game-controller">
+			<div class="rows-controller ">
+				<label for="">Rows 
+					<i id="rows-up" class="fa fa-2x fa-chevron-circle-down controller-icons"></i>
+					<i id="rows-down" class="fa fa-2x fa-chevron-circle-up controller-icons"></i>
+				</label>
+				<div class="options-controller">
+					<input id="rows-number" type="text" class="form-control form-control-sm input-controll" value="15" readonly>
+				</div>
+				
+			</div>
+			<div class="rows-controller ">
+				<img class="img-smiley" src="./src/img/smiley-happy.svg"/>
+			</div>
+			<div class="columns-controller">
+				<label for="">Colums 
+					<i id="columns-up" class="fa fa-2x fa-chevron-circle-down controller-icons"></i>
+					<i id="columns-down" class="fa fa-2x fa-chevron-circle-up controller-icons"></i>
+				</label>
+				<div>
+					<input id="columns-number" type="text" class="form-control form-control-sm input-controll" value="30" readonly>
+				</div>
+			</div>
+		</div>
+		<button id="btn-start" type="button" class="btn btn-success btn-sm btn-block">Start Game</button>
+		<div class="container game-area">
+			
+			
+		</div>
+		
+	</div>
+    
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	<!-- Game JavaScript -->
+	<script src="./src/js/game.js"></script>
+
+  </body>
+</html>
