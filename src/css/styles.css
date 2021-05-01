@@ -52,6 +52,11 @@ body {
 .controller-icons {
 	position: relative;
 	top: 5px;
+	cursor: pointer;
+}
+
+.txtColums, .txtRows {
+	margin: 0 10px;
 }
 
 .options-controller {} 
@@ -100,9 +105,8 @@ body {
 
 .game-cell {
 	margin: 1px 0 0 1px;
-	/* width: calc((508px - 31px)/30);
-	height: calc((508px - 31px)/30);  */
 	background-color: var(--view-bg);
+	cursor: pointer;
 }
 
 .game-icon {
@@ -114,8 +118,3 @@ body {
 	border: 1px solid black;
 	padding: 1px;
 }
-
-
-/*
-394, 292
-*/
