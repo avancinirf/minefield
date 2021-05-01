@@ -3,7 +3,8 @@
 	const $rowsNumber = $('#rows-number'),
 		$columnsNumber = $('#columns-number'),
 		$area = $('.game-area'),
-		$loader = $('#loader');
+		$loader = $('#loader'),
+		$start = $('#btn-start');
 
 
 	const draw = () => {
@@ -48,6 +49,42 @@
 		})
 		$('#columns-down').on('click', () => {
 			redraw($columnsNumber, parseInt($columnsNumber.val()) -1)
+		})
+		$start.on('click', () => startGame())
+	}
+
+	const startGame = () => {
+		$loader.show()
+		drawBombs()
+		addGameCellsHandler()
+		$loader.hide()
+	}
+
+	const drawBombs = () => {
+		const nr = parseFloat($rowsNumber.val()),
+			nc = parseFloat($columnsNumber.val())
+		const bombs = parseInt(0.1 * (nr * nc))
+		for (let b = 0; b < bombs; b++) {
+			const r = parseInt(Math.random() * (nr - 0) + 0)
+			const c = parseInt(Math.random() * (nc - 0) + 0)
+			const $cell = $(`#cell-${r}-${c}`)
+			const cellInfo = $cell.data()
+			if (cellInfo?.bomb) {
+				b--
+				continue
+			}
+			$cell.data('bomb', true)
+			$cell.css('background-color', 'yellow')
+		}
+	}
+	
+	const addGameCellsHandler = () => {
+		$('.game-cell').on('click', (e) => {
+			if($(e.target).data('bomb') === true) {
+				// TODO - End Game
+			} else {
+				// TODO - Open cells and calculate numbers
+			}
 		})
 	}
 
