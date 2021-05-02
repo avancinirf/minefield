@@ -91,9 +91,20 @@ body {
 	margin-bottom: 10px;
 }
 
-.img-smiley {
+#btn-restart {
+	margin-bottom: 10px;
+	display: none;
+}
+
+#img-smiley-happy {
 	width: 50%;
 	height: 50%;
+}
+
+#img-smiley-sad {
+	width: 50%;
+	height: 50%;
+	display: none;
 }
 
 .game-row {
@@ -118,4 +129,45 @@ body {
 	height: 10px;
 	border: 1px solid black;
 	padding: 1px;
+}
+
+.bomb {
+	background-image: url('../img/bomb.svg');
+	padding: 0.2%;
+	background-repeat: no-repeat;
+	background-size: cover;
+  	background-origin: content-box;
+	background-color: #cccccc;
+	border: 1px solid black;
+}
+
+.explosion {
+	background-image: url('../img/explosion.svg');
+	padding: 0.2%;
+	background-repeat: no-repeat;
+	background-size: cover;
+  	background-origin: content-box;
+	background-color: yellow;
+	border: 1px solid black;
+}
+
+.flag {
+
+}
+
+.number {
+	/* background-image: url('../img/1.svg'); */
+	padding: 0.2%;
+	background-repeat: no-repeat;
+	background-size: contain;
+  	background-origin: content-box;
+	background-color: #cccccc;
+	border: 1px solid black;
+}
+
+.empty {
+	background-color: var(--game-bg);
+	cursor: none;
+	pointer-events: none;
+	border: 1px solid black;
 }
